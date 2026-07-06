@@ -1,0 +1,16 @@
+body {
+    background-color: rgb(238, 245, 245);
+    align-items: center;
+    
+}
+
+.column  {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+    
+    gap: 24px;          
+    padding: 40px;      
+    width: 100%;
+    box-sizing: border-box;
+}
+/* Presentado por Juan Jose Hernandez Vasquez */
