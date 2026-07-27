@@ -1,0 +1,8 @@
+body {
+    background-color: rgb(0, 0, 0);
+    align-items: center;
+    td {color:rgb(255, 255, 255)}
+    .tr {color:rgb(255, 255, 255)}
+    .field { color: rgb(255, 255, 255); font-size: 20;}
+    .label { color: rgb(255, 255, 255); font-size: 20;}
+}

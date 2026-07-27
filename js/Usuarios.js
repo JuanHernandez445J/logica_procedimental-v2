@@ -15,11 +15,23 @@ let contraseña = document.getElementById("contraseña").value;
 
 if(nombre == "" || apellido == "" || tipoDocumento == "" || numeroDocumento == "" || telefono == "" || correo == "" || genero == "" || cargo == "" || fechaNacimiento == "" || contraseña == "")
 {
-    alert("Por favor, complete todos los campos.");
+     Swal.fire({
+        position: "top-end",
+        icon: "error",
+        title: "Campos incompletos",
+        showConfirmButton: false,
+        timer: 1500
+        });
     console.log("Campos incompletos");
 }
 else{
-    alert("Usuario registrado con éxito." + "\n" + "Nombre: " + nombre + "\n" + "Apellido: " + apellido + "\n" + "Tipo de Documento: " + tipoDocumento + "\n" + "Número de Documento: " + numeroDocumento + "\n" + "Teléfono: " + telefono + "\n" + "Correo: " + correo + "\n" + "Género: " + genero + "\n" + "Cargo: " + cargo + "\n" + "Fecha de Nacimiento: " + fechaNacimiento);
+   Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "Campos completos",
+        showConfirmButton: false,
+        timer: 1500
+   });
     console.log("Usuario registrado con éxito\n" + "Nombre: " + nombre + "\n" + "Apellido: " + apellido + "\n" + "Tipo de Documento: " + tipoDocumento + "\n" + "Número de Documento: " + numeroDocumento + "\n" + "Teléfono: " + telefono + "\n" + "Correo: " + correo + "\n" + "Género: " + genero + "\n" + "Cargo: " + cargo + "\n" + "Fecha de Nacimiento: " + fechaNacimiento);
 }});
 // Presentado por Juan Jose Hernandez Vasquez

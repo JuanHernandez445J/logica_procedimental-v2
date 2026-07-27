@@ -10,11 +10,23 @@ let metodoPago = document.getElementById("metodoPago").value;
 let telefono = document.getElementById("telefono").value;
 
 if(nombreProducto == "" || direccion == "" || nombreUsuario == "" || cantidad == "" || metodoPago == "" || telefono == ""){
-    alert("Por favor, complete todos los campos.");
+    Swal.fire({
+        position: "top-end",
+        icon: "error",
+        title: "Campos incompletos",
+        showConfirmButton: false,
+        timer: 1500
+    });
     console.log("Campos incompletos");
 }
 else{
-    alert("Pedido realizado con éxito." + "\n" + "Nombre del Producto: " + nombreProducto + "\n" + "Dirección: " + direccion + "\n" + "Nombre del Usuario: " + nombreUsuario + "\n" + "Cantidad: " + cantidad + "\n" + "Método de Pago: " + metodoPago + "\n" + "Teléfono: " + telefono);
+    Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "Campos completos",
+        showConfirmButton: false,
+        timer: 1500
+    });
     console.log("Pedido realizado con éxito\n" + "Nombre del Producto: " + nombreProducto + "\n" + "Dirección: " + direccion + "\n" + "Nombre del Usuario: " + nombreUsuario + "\n" + "Cantidad: " + cantidad + "\n" + "Método de Pago: " + metodoPago + "\n" + "Teléfono: " + telefono);
 }});
 // Presentado por Juan Jose Hernandez Vasquez

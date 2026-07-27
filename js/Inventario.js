@@ -10,11 +10,23 @@ let precio = document.getElementById("precio").value;
 let proveedor = document.getElementById("proveedor").value;
 
 if(categoria == "" || codigo == "" || nombre == "" || descripcion == "" || cantidad == "" || precio == "" || proveedor == ""){
-    alert("Por favor, complete todos los campos.");
+    Swal.fire({
+        position: "top-end",
+        icon: "error",
+        title: "Campos incompletos",
+        showConfirmButton: false,
+        timer: 1500
+    });
     console.log("Campos incompletos");
 }
 else{
-    alert("Producto agregado al inventario." + "\n" + "Categoria: " + categoria + "\n" + "Código: " + codigo + "\n" + "Nombre: " + nombre + "\n" + "Descripción: " + descripcion + "\n" + "Cantidad: " + cantidad + "\n" + "Precio: " + precio + "\n" + "Proveedor: " + proveedor );
+    Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "Campos completos",
+        showConfirmButton: false,
+        timer: 1500
+    });
     console.log("Producto agregado\n" + "Categoria: " + categoria + "\n" + "Código: " + codigo + "\n" + "Nombre: " + nombre + "\n" + "Descripción: " + descripcion + "\n" + "Cantidad: " + cantidad + "\n" + "Precio: " + precio + "\n" + "Proveedor: " + proveedor);
 }
 });
